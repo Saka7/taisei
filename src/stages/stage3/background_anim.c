@@ -32,4 +32,3 @@ DEFINE_EXTERN_TASK(animate_bg) {
 	stage3d_update(&stage_3d_context);
 
 }
-
