@@ -12,9 +12,9 @@
 
 #include "stages/stage1/stage1.h"
 #include "stages/stage2/stage2.h"
+#include "stages/stage3/stage3.h"
 #include "stages/stage5/stage5.h"
 #include "stages/stage6/stage6.h"
-#include "stages/stage3.h"
 #include "stages/stage4.h"
 #include "stages/extra.h"
 
