@@ -9,7 +9,6 @@
 #include "taisei.h"
 
 #include "spells.h"
-#include "../scuttle.h"
 
 #include "common_tasks.h"
 #include "global.h"
@@ -78,7 +77,7 @@ DEFINE_EXTERN_TASK(stage3_spell_deadly_dance) {
             }
         }
 
-        play_sound("shot1");
+        play_sfx("shot1");
 
         if(!(time % 3)) {
             for(i = -1; i < 2; i += 2) {

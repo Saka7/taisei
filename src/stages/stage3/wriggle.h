@@ -9,11 +9,15 @@
 #ifndef IGUARD_stages_stage3_wriggle_h
 #define IGUARD_stages_stage3_wriggle_h
 
+#include "coroutine.h"
 #include "taisei.h"
 
 #include "boss.h"
 
 Boss *stage3_spawn_wriggle(cmplx pos);
-void stage3_draw_wriggle_spellbg(Boss *boss, int time);
+void stage3_draw_wriggle_spellbg(Boss* boss, int time);
+void wriggle_nonspell_slave(Boss* b, Enemy* e, int time);
+
+DECLARE_EXTERN_TASK_WITH_INTERFACE(wriggle_nonspell_1, BossAttack);
 
 #endif // IGUARD_stages_stage3_wriggle_h

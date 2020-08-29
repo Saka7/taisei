@@ -30,5 +30,4 @@ DEFINE_EXTERN_TASK(animate_bg) {
 	draw_data->color.b -= 0.1 / 160.0;
 
 	stage3d_update(&stage_3d_context);
-
 }

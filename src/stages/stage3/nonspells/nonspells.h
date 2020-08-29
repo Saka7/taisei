@@ -13,6 +13,9 @@
 
 #include "boss.h"
 
+#include "stages/stage3/wriggle.h"
+#include "stages/stage3/scuttle.h"
+
 DECLARE_EXTERN_TASK_WITH_INTERFACE(stage3_midboss_nonspell_1, BossAttack);
 DECLARE_EXTERN_TASK_WITH_INTERFACE(stage3_boss_nonspell_1, BossAttack);
 DECLARE_EXTERN_TASK_WITH_INTERFACE(stage3_boss_nonspell_2, BossAttack);

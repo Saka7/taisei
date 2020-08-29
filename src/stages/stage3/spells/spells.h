@@ -13,6 +13,9 @@
 
 #include "boss.h"
 
+#include "stages/stage3/wriggle.h"
+#include "stages/stage3/scuttle.h"
+
 DECLARE_EXTERN_TASK_WITH_INTERFACE(stage3_spell_firefly_storm, BossAttack);
 DECLARE_EXTERN_TASK_WITH_INTERFACE(stage3_spell_light_singularity, BossAttack);
 DECLARE_EXTERN_TASK_WITH_INTERFACE(stage3_spell_moonlight_rocket, BossAttack);

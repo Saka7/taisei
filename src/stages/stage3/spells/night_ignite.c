@@ -9,9 +9,9 @@
 #include "taisei.h"
 
 #include "spells.h"
-#include "../wriggle.h"
 
 #include "common_tasks.h"
+
 #include "global.h"
 
 DEFINE_EXTERN_TASK(stage3_spell_night_ignite) {

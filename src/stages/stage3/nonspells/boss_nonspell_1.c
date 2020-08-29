@@ -9,11 +9,12 @@
 #include "taisei.h"
 
 #include "nonspells.h"
-#include "../wriggle.h"
 
 #include "global.h"
 
 DEFINE_EXTERN_TASK(stage3_boss_nonspell_1) {
     Boss *boss = INIT_BOSS_ATTACK();
     BEGIN_BOSS_ATTACK();
+
+
 }

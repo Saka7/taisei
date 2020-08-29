@@ -115,7 +115,7 @@ TASK(side_swirl, { MoveParams move; cmplx start_pos; }) {
 			),
 		);
 
-		play_sound("shot1");
+		play_sfx("shot1");
 		WAIT(20);
 	}
 
@@ -127,9 +127,6 @@ TASK(side_swirls_procession, { int interval; int count; MoveParams move; cmplx s
 		WAIT(ARGS.interval);
 	}
 }
-
-
-
 
 TASK(little_fairy_shot_ball, { BoxedEnemy e; int shot_interval; int intensity;} ) {
 	Enemy *e = TASK_BIND(ARGS.e);
@@ -160,7 +157,7 @@ TASK(little_fairy_shot_ball, { BoxedEnemy e; int shot_interval; int intensity;} 
 			);
 		}
 
-		play_sound("shot1");
+		play_sfx("shot1");
 		WAIT(ARGS.shot_interval);
 	}
 
@@ -197,7 +194,7 @@ TASK(little_fairy_shot_wave, { BoxedEnemy e; int shot_interval; int intensity; }
 			);
 		}
 
-		play_sound("shot1");
+		play_sfx("shot1");
 		WAIT(ARGS.shot_interval);
 	}
 
@@ -332,7 +329,7 @@ TASK(burst_fairy, { cmplx pos; cmplx target_pos; } ) {
 	}
 
 	WAIT(60);
-	play_sound("shot_special1");
+	play_sfx("shot_special1");
 	INVOKE_TASK(common_charge, e->pos, RGBA(0.0, 0.5, 1.0, 0.5), 60, .sound = COMMON_CHARGE_SOUNDS);
 
 	int intensity = difficulty_value(4, 6, 8, 10);
@@ -386,7 +383,7 @@ TASK(charge_fairy, { cmplx pos; cmplx target_pos; cmplx exit_dir; int charge_tim
 		WAIT(100);
 	}
 
-	play_sound("shot_special1");
+	play_sfx("shot_special1");
 	INVOKE_TASK(common_charge, e->pos, RGBA(0.0, 0.5, 1.0, 0.5), ARGS.charge_time, .sound = COMMON_CHARGE_SOUNDS);
 	WAIT(ARGS.charge_time + 20);
 
@@ -431,8 +428,8 @@ TASK(charge_fairy, { cmplx pos; cmplx target_pos; cmplx exit_dir; int charge_tim
 		spawn_projectile_highlight_effect(p);
 		// TODO: get rid of p->args
 		p->move = move_linear(p->args[0] * (p->args[1] * 0.2));
-		play_sound("redirect");
-		play_sound("shot_special1");
+		play_sfx("redirect");
+		play_sfx("shot_special1");
 	});
 
 	WAIT(100);
@@ -505,7 +502,7 @@ TASK(corner_fairy, { cmplx pos; cmplx p1; cmplx p2; int type; } ) {
 						1.5
 					)
 				);
-				play_sound("shot1_loop");
+				play_sfx("shot1_loop");
 				WAIT(1);
 			}
 		}
